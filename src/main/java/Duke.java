@@ -4,29 +4,33 @@ import java.util.ArrayList;
 
 public class Duke {
     public static void main(String[] args) {
-//        String logo = " ____        _        \n"
-//                + "|  _ \\ _   _| | _____ \n"
-//                + "| | | | | | | |/ / _ \\\n"
-//                + "| |_| | |_| |   <  __/\n"
-//                + "|____/ \\__,_|_|\\_\\___|\n";
-//        System.out.println("Hello from\n" + logo);
         String greetings = "\nHello! I'm Duke\n"
                 + "What can I do for you?\n";
         System.out.println(greetings);
-//        System.out.println("Bye. Hope to see you again soon!");
-//    }
-//}
-        //level 1
-        Scanner echo = new Scanner(System.in); //creates new read user input
-        for (int i = 0; ; i++) {
-            String echoString = echo.nextLine();
-            if (!echoString.equals("bye")) {
-                System.out.println(echoString + "\n");
-            } else {
+
+//        //level 2
+        ArrayList<String> list = new ArrayList<String>();
+        Scanner add = new Scanner(System.in); //creates new read user input
+        for (int i=0;;i++){
+            String addString = add.nextLine();
+
+            if (addString.equals("bye")) {
+                System.out.println("Bye. Hope to see you again soon!\n");
                 break;
             }
+
+            else if (addString.equals("list")) {
+                for (int j=0;j<list.size();j++) {
+                    System.out.println(j+1+". "+ list.get(j));
+                }
+                System.out.println("");
+            }
+
+            else {
+                System.out.println("added: " + addString + "\n");
+                list.add(addString);
+            }
         }
-        System.out.println("Bye. Hope to see you again soon!");
     }
 }
 
@@ -113,89 +117,6 @@ public class Duke {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-////        //level 2
-////        ArrayList<String> list = new ArrayList<String>();
-////        Scanner add = new Scanner(System.in); //creates new read user input
-////        for (int i=0;;i++){
-////            String addString = add.nextLine();
-////
-////            if (addString.equals("bye")) {
-////                System.out.println("Bye. Hope to see you again soon!\n");
-////                break;
-////            }
-////
-////            else if (addString.equals("list")) {
-////                for (int j=0;j<list.size();j++) {
-////                    System.out.println(j+1+". "+ list.get(j));
-////                }
-////                System.out.println("");
-////            }
-////
-////            else {
-////                System.out.println("added: " + addString + "\n");
-////                list.add(addString);
-////            }
-////        }
-//
-//        ArrayList<String> list = new ArrayList<String>();
-//        Scanner add = new Scanner(System.in); //creates new read user input
-//        for (int i=0;;i++){
-//            String addString = add.nextLine();
-//
-//            if (addString.equals("bye")) {
-//                System.out.println("Bye. Hope to see you again soon!\n");
-//                break;
-//            }
-//
-//            else if (addString.equals("list")) {
-//                System.out.println("Here are the tasks in your list:");
-//                for (int j=0;j<list.size();j++) {
-//                    System.out.println(j+1+". "+ list.get(j));
-//                }
-//                System.out.println("");
-//            }
-//
-//            else {
-//                System.out.println("added: " + addString + "\n");
-//                list.add(addString);
-//            }
-//        }
-//
-//    }
-//}
-
-
-
-
 //level 3
 //public class Duke {
 //    static String[] descriptions = new String[100];
@@ -263,3 +184,26 @@ public class Duke {
 
 
 
+
+//level 1
+//        Scanner echo = new Scanner(System.in); //creates new read user input
+//        for (int i = 0; ; i++) {
+//            String echoString = echo.nextLine();
+//            if (!echoString.equals("bye")) {
+//                System.out.println(echoString + "\n");
+//            } else {
+//                break;
+//            }
+//        }
+//        System.out.println("Bye. Hope to see you again soon!");
+//    }
+//}
+
+
+
+//        String logo = " ____        _        \n"
+//                + "|  _ \\ _   _| | _____ \n"
+//                + "| | | | | | | |/ / _ \\\n"
+//                + "| |_| | |_| |   <  __/\n"
+//                + "|____/ \\__,_|_|\\_\\___|\n";
+//        System.out.println("Hello from\n" + logo);
