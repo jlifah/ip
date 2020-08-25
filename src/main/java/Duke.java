@@ -4,15 +4,28 @@ import java.util.ArrayList;
 
 public class Duke {
     public static void main(String[] args) {
-        String logo = " ____        _        \n"
-                + "|  _ \\ _   _| | _____ \n"
-                + "| | | | | | | |/ / _ \\\n"
-                + "| |_| | |_| |   <  __/\n"
-                + "|____/ \\__,_|_|\\_\\___|\n";
-        System.out.println("Hello from\n" + logo);
+//        String logo = " ____        _        \n"
+//                + "|  _ \\ _   _| | _____ \n"
+//                + "| | | | | | | |/ / _ \\\n"
+//                + "| |_| | |_| |   <  __/\n"
+//                + "|____/ \\__,_|_|\\_\\___|\n";
+//        System.out.println("Hello from\n" + logo);
         String greetings = "\nHello! I'm Duke\n"
                 + "What can I do for you?\n";
         System.out.println(greetings);
+//        System.out.println("Bye. Hope to see you again soon!");
+//    }
+//}
+        //level 1
+        Scanner echo = new Scanner(System.in); //creates new read user input
+        for (int i = 0; ; i++) {
+            String echoString = echo.nextLine();
+            if (!echoString.equals("bye")) {
+                System.out.println(echoString + "\n");
+            } else {
+                break;
+            }
+        }
         System.out.println("Bye. Hope to see you again soon!");
     }
 }
@@ -80,19 +93,54 @@ public class Duke {
 
 
 
-        //level 1
-//        Scanner echo = new Scanner(System.in); //creates new read user input
-//        for (int i = 0; ; i++) {
-//            String echoString = echo.nextLine();
-//            if (!echoString.equals("bye")) {
-//                System.out.println(echoString + "\n");
-//            } else {
-//                break;
-//            }
-//        }
-//        System.out.println("Bye. Hope to see you again soon!");
-//    }
-//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 ////        //level 2
 ////        ArrayList<String> list = new ArrayList<String>();
