@@ -24,29 +24,16 @@ public class Duke {
             }
 
 
-
             else if (userInput.startsWith("deadline")) {
-
-                String description = userInput.substring(9);
-                int index = description.indexOf('/');
-                description=description.substring(0, index-1);
-
-                String by = userInput.substring(userInput.indexOf('/')+4); //keep those after '/'
-
-                list.addDeadline(description,by);
+                list.addDeadline(getDeadlineDescription(userInput),getStringAfterByAt(userInput));
             }
 
 
             else if (userInput.startsWith("event")) {
-                String description = userInput.substring(6);
-                int index = description.indexOf('/');
-                description=description.substring(0, index-1);
-                String at = userInput.substring(userInput.indexOf('/')+4); //keep those after '/'
-                list.addEvent(description,at);
+                list.addEvent(getEventDescription(userInput),getStringAfterByAt(userInput));
             }
 
             else if (userInput.startsWith("todo")) {
-
                 list.addTodo(userInput.substring(5));
             }
 
@@ -61,5 +48,28 @@ public class Duke {
         System.out.println("Bye. Hope to see you again soon!");
 
     }
+
+
+
+    public static String getDeadlineDescription (String input) {
+        String description = input.substring(9);
+        int index = description.indexOf('/');
+        description=description.substring(0, index-1);
+        return description;
+    }
+
+    public static String getStringAfterByAt (String input) {
+        String by = input.substring(input.indexOf('/')+4); //keep those after '/'
+        return by;
+    }
+
+    public static String getEventDescription (String input) {
+        String description = input.substring(6);
+        int index = description.indexOf('/');
+        description=description.substring(0, index-1);
+        return description;
+    }
+
+
 }
 
