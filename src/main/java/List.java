@@ -18,14 +18,14 @@ public class List {
     }
 
 
-//    public void addTask(String description) {
-//        this.list[size] = new Task(description);
-//        this.size++;
-//    }
+    public void addTask(String description) {
+        this.list[size] = new Task(description);
+        this.size++;
+    }
 
 
     public void addDeadline (String description, String by) {
-        this.list[this.size] = new Deadline(description, by);
+        this.list[size] = new Deadline(description, by);
         System.out.println("Got it. I've added this task:");
 //        System.out.println("[D][" + this.list[this.size].getStatusIcon() + "] " + description + " (by: " + by + ")");
         System.out.println(list[this.size].toString());

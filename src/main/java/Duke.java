@@ -33,28 +33,13 @@ public class Duke {
                 list.addEvent(getEventDescription(userInput),getStringAfterByAt(userInput));
             }
 
-
             else if (userInput.startsWith("todo")) {
-                try {
-                    if (userInput.substring(5).equals("")) {
-                        throw new Exception();
-                    }
-                    list.addTodo(userInput.substring(5));
-                } catch (Exception e) {
-                    System.out.println("☹ OOPS!!! The description of a todo cannot be empty.\n");
-                }
+                list.addTodo(userInput.substring(5));
             }
 
-
             else {
-                try {
-                    throw new Exception();
-                } catch (Exception e) {
-                    System.out.println("☹ OOPS!!! I'm sorry, but I don't know what that means :-(\n");
-                }
-//                list.addTask(userInput);
-//                System.out.println("added: " + userInput + "\n");
-                //error msg
+                list.addTask(userInput);
+                System.out.println("added: " + userInput + "\n");
             }
 
             userInput = in.nextLine(); //read next user input
