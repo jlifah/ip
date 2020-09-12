@@ -71,7 +71,7 @@ public class Duke {
     }
 
     public static String getStringAfterByAt (String input) {
-        String by = input.substring(input.indexOf('/')+4); //keep those after '/'
+        String by = input.substring(input.indexOf('/') + 4);
         return by;
     }
 
