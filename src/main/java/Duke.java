@@ -2,7 +2,6 @@
 import java.util.Scanner;
 
 public class Duke {
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         List list = new List();
@@ -10,7 +9,7 @@ public class Duke {
 
         System.out.println("Hello! I'm Duke");
         System.out.println("What can I do for you?\n");
-
+        list.createTextFile();
 
         String userInput = in.nextLine();
 
@@ -21,6 +20,10 @@ public class Duke {
 
             else if(userInput.startsWith("done")){   //cannot use command.equals since user is entering more than just "done"
                 list.isComplete(userInput);
+            }
+
+            else if (userInput.startsWith("delete")) {
+                list.toRemove(userInput.substring(7));
             }
 
 
@@ -34,22 +37,31 @@ public class Duke {
             }
 
             else if (userInput.startsWith("todo")) {
-                list.addTodo(userInput.substring(5));
+                try {
+                    if (userInput.substring(5).equals("")) {
+                        throw new Exception();
+                    }
+                    list.addTodo(userInput.substring(5));
+                } catch (Exception e) {
+                    System.out.println("☹ OOPS!!! The description of a todo cannot be empty.\n");
+                }
             }
+
+
+
 
             else {
-                list.addTask(userInput);
-                System.out.println("added: " + userInput + "\n");
+              try {
+                   throw new Exception();
+                } catch (Exception e) {
+                    System.out.println("☹ OOPS!!! I'm sorry, but I don't know what that means :-(\n");
+                }
             }
-
             userInput = in.nextLine(); //read next user input
         }
-
+        list.UpdateTextFile();
         System.out.println("Bye. Hope to see you again soon!");
-
     }
-
-
 
     public static String getDeadlineDescription (String input) {
         String description = input.substring(9);
