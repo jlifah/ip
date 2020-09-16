@@ -93,18 +93,19 @@ public class List {
 //        }
 //    }
 
+
     private static String PATH = new File("").getAbsolutePath();
     static File filePath = new File(PATH + "/duke.txt");
 
     public void UpdateTextFile () {
         FileWriter fstream;
         try {
+            fstream = new FileWriter(filePath);
 //            BufferedWriter out = new BufferedWriter(fstream);
             String content="";
             for (int i=0;i<tasks.size();i++) {
                 content=content.concat(tasks.get(i)+"\n");
             }
-            fstream = new FileWriter(filePath);
             fstream.write(content);
             fstream.close();
 
