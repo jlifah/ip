@@ -8,9 +8,6 @@ public class Event extends Task {
 
     }
 
-    public String getSituation () {
-        return ("[E]");
-    }
 
     @Override
     public String toString() {

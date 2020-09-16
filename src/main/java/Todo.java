@@ -5,9 +5,6 @@ public class Todo extends Task{
 
     }
 
-    public String getSituation () {
-        return ("[T]");
-    }
 
     @Override
     public String toString() {

@@ -1,22 +1,15 @@
-import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Duke {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         List list = new List();
 
 
         System.out.println("Hello! I'm Duke");
         System.out.println("What can I do for you?\n");
-
-
-
-
-//        File f = new File("/users/jenny/Desktop/Duke.txt");
-//        if(!f.exists() && !f.isDirectory()) {
-//            list.createTextFile();
-//        }
+        list.readOldTextFile();
 
         String userInput = in.nextLine();
 
@@ -54,9 +47,6 @@ public class Duke {
                 }
             }
 
-
-
-
             else {
               try {
                    throw new Exception();
@@ -88,7 +78,5 @@ public class Duke {
         description=description.substring(0, index-1);
         return description;
     }
-
-
 }
 
