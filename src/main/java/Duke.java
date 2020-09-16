@@ -1,4 +1,4 @@
-
+import java.io.File;
 import java.util.Scanner;
 
 public class Duke {
@@ -9,7 +9,14 @@ public class Duke {
 
         System.out.println("Hello! I'm Duke");
         System.out.println("What can I do for you?\n");
-        list.createTextFile();
+
+
+
+
+//        File f = new File("/users/jenny/Desktop/Duke.txt");
+//        if(!f.exists() && !f.isDirectory()) {
+//            list.createTextFile();
+//        }
 
         String userInput = in.nextLine();
 

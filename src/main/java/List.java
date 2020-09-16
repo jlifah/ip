@@ -1,4 +1,5 @@
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -77,35 +78,40 @@ public class List {
 
     }
 
-    public void createTextFile () {
-        String filename = "/users/jenny/Desktop/Duke.txt";
-        FileWriter fstream;
-        try {
-            fstream = new FileWriter(filename);
-            BufferedWriter out = new BufferedWriter(fstream);
-            out.write("");
-            out.newLine();
-            out.flush();
-            out.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void createTextFile () {
+//        String filename = "/users/jenny/Desktop/Duke.txt";
+//        FileWriter fstream;
+//        try {
+//            fstream = new FileWriter(filename);
+//            BufferedWriter out = new BufferedWriter(fstream);
+//            out.write("");
+//            out.newLine();
+//            out.flush();
+//            out.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+    private static String PATH = new File("").getAbsolutePath();
+    static File filePath = new File(PATH + "/duke.txt");
 
     public void UpdateTextFile () {
-        String filename = "/users/jenny/Desktop/Duke.txt";
         FileWriter fstream;
         try {
-            fstream = new FileWriter(filename);
-            BufferedWriter out = new BufferedWriter(fstream);
+//            BufferedWriter out = new BufferedWriter(fstream);
             String content="";
             for (int i=0;i<tasks.size();i++) {
                 content=content.concat(tasks.get(i)+"\n");
             }
-            out.write(content);
-            out.newLine();
-            out.flush();
-            out.close();
+            fstream = new FileWriter(filePath);
+            fstream.write(content);
+            fstream.close();
+
+//            out.write(content);
+//            out.newLine();
+//            out.flush();
+//            out.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
