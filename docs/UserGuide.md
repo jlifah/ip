@@ -15,8 +15,13 @@
 
 {Give detailed description of each feature}
 
+<<<<<<< HEAD
 ### Adding a todo: `todo`
 Adds a new item to the list of todo items.
+=======
+### Adding a to-do: `todo`
+Adds a to-do item to the list of to-dos.
+>>>>>>> remotes/origin/tp-template
 
 Format: `todo n/TODO_NAME d/DEADLINE`
 
@@ -33,10 +38,18 @@ Example of usage:
 
 **Q**: How do I transfer my data to another computer? 
 
+<<<<<<< HEAD
 **A**: {your answer here}
+=======
+**A**: Well, write the User Guide in active voice anyway.
+>>>>>>> remotes/origin/tp-template
 
 ## Command Summary
 
 {Give a 'cheat sheet' of commands here}
 
+<<<<<<< HEAD
 * Add todo `todo n/TODO_NAME d/DEADLINE`
+=======
+* Add to-do `todo n/TODO_NAME d/DEADLINE`
+>>>>>>> remotes/origin/tp-template

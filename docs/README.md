@@ -1,8 +1,20 @@
-# Duke
+# User Guide
 
-{Give product intro here}
+## Features 
 
-Useful links:
-* [User Guide](UserGuide.md)
-* [Developer Guide](DeveloperGuide.md)
-* [About Us](AboutUs.md)
+### Feature 1 
+Description of feature.
+
+## Usage
+
+### `Keyword` - Describe action
+
+Describe action and its outcome.
+
+Example of usage: 
+
+`keyword (optional arguments)`
+
+Expected outcome:
+
+`outcome`

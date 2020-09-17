@@ -47,4 +47,8 @@ jobs:
         if: always() && runner.os == 'Windows'
         working-directory:  ${{ github.workspace }}/text-ui-test
         shell: cmd
+<<<<<<< HEAD
         run: runtest.bat
+=======
+        run: runtest.bat
+>>>>>>> remotes/origin/tp-template

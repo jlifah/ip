@@ -9,4 +9,8 @@ class DukeTest {
     public void sampleTest() {
         assertTrue(true);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> remotes/origin/tp-template
