@@ -40,7 +40,7 @@ public class Duke {
             }
 
             else {
-                list.addTask(userInput);
+//                list.addTask(userInput);
                 System.out.println("added: " + userInput + "\n");
             }
 

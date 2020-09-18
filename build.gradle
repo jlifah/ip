@@ -5,28 +5,17 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.1.0'
 }
 
-<<<<<<< HEAD
-=======
-group 'seedu.duke'
-version '0.1.0'
-
->>>>>>> remotes/origin/tp-template
 repositories {
     mavenCentral()
 }
 
 dependencies {
-<<<<<<< HEAD
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.0'
     testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.5.0'
-=======
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.5.0'
->>>>>>> remotes/origin/tp-template
 }
 
 test {
     useJUnitPlatform()
-<<<<<<< HEAD
 
     testLogging {
         events "passed", "skipped", "failed"
@@ -37,8 +26,6 @@ test {
         showStackTraces true
         showStandardStreams = false
     }
-=======
->>>>>>> remotes/origin/tp-template
 }
 
 application {
@@ -47,13 +34,7 @@ application {
 
 shadowJar {
     archiveBaseName = "duke"
-<<<<<<< HEAD
     archiveClassifier = null
-=======
-    archiveVersion = "0.0.1"
-    archiveClassifier = null
-    archiveAppendix = null
->>>>>>> remotes/origin/tp-template
 }
 
 checkstyle {
@@ -62,8 +43,4 @@ checkstyle {
 
 run{
     standardInput = System.in
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> remotes/origin/tp-template
