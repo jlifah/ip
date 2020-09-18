@@ -9,7 +9,7 @@ public class List {
     ArrayList<Task> tasks =new ArrayList<>();
     private static int size;
 
-    public List() {                             //initial constructor
+    public List() {
         this.size = 0;
     }
 
@@ -29,8 +29,8 @@ public class List {
         System.out.println("Now you have " + this.size + " tasks in the list.\n");
     }
 
-    public void addOldDeadline (String description, String by) {
-        tasks.add(new Deadline(description,by));
+    public void addOldDeadline (String description, String by, Boolean isDone) {
+        tasks.add(new Deadline(description,by,isDone));
         this.size++;
     }
 
@@ -43,8 +43,8 @@ public class List {
         System.out.println("Now you have " + this.size + " tasks in the list.\n");
     }
 
-    public void addOldEvent (String description, String at) {
-        tasks.add(new Event(description,at));
+    public void addOldEvent (String description, String at, Boolean isDone) {
+        tasks.add(new Event(description,at, isDone));
         this.size++;
     }
 
@@ -84,6 +84,8 @@ public class List {
     }
 
 
+
+
     private static String PATH = new File("").getAbsolutePath();
     static File filePath = new File(PATH + "/duke.txt");
 
@@ -92,66 +94,58 @@ public class List {
         //2. split into T/E/D, done and description and at/by
         //3. add as new task into tasks arraylist
 
-       try {
-           Scanner s = new Scanner(filePath);
-           while (s.hasNext()) {
-               String line = s.nextLine();
+        try {
+            filePath.createNewFile();
+//            System.out.println(PATH);
+            Scanner s = new Scanner(filePath);
+            while (s.hasNext()) {
+                String line = s.nextLine();
 
-               if (line.startsWith("[T]")) {
+                if (line.startsWith("[T]")) {
                     String description = line.substring(7);
-                   addOldTodo(description);
-               } else if (line.startsWith("[D]")) {
-                   String description = line.substring(7);
-                   String by = line.substring(line.indexOf("by")+4,line.length()-1);
-                   addOldDeadline(description,by);
-               } else if (line.startsWith("[E]")) {
-                   String description = line.substring(7);
-                   String at = line.substring(line.indexOf("at")+4, line.length()-1);
-                   addOldEvent(description,at);
-               }
+                    addOldTodo(description);
+                }
 
-           }
-       } catch (FileNotFoundException e) {
-           System.out.println("File not found");
-       }
+                else if (line.startsWith("[D]")) {
+                    String description = line.substring(7,line.indexOf("by")-2);
+                    String by = line.substring(line.indexOf("by")+4,line.length()-1);
+                    String status = line.substring(4,5);
+
+                    Boolean isDone;
+                    if (status.equals("\u2718")) {
+                        isDone=false;
+                    }
+                    else {
+                        isDone=true;
+                    }
+
+
+                    addOldDeadline(description,by,isDone);
+                }
+
+                else if (line.startsWith("[E]")) {
+                    String description = line.substring(7,line.indexOf("at")-2);
+                    String at = line.substring(line.indexOf("at")+4, line.length()-1);
+                    String status = line.substring(4,5);
+
+                    Boolean isDone;
+                    if (status.equals("\u2718")) {
+                        isDone=false;
+                    }
+                    else {
+                        isDone=true;
+                    }
+
+                    addOldEvent(description,at, isDone);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-//
-//    public void readOldTextFile () throws FileNotFoundException {
-//        String dataPath = new File("data").getAbsolutePath();
-//        File file = new File(dataPath + "/tasks.txt");
-//        Scanner sc = new Scanner(file);
-//        String dataString = sc.nextLine();
-//
-//        final String[] data = dataString.trim().split("\\|", 3);
-//        String description;
-//        int i=0;
-//
-//        switch(data[0]) {
-//        case "[T]":
-//            data[1]=tasks.get(i).getStatusIcon();
-//            i++;
-//            description = data[2];
-//            tasks.add(new Todo(description));
-//            break;
-//        case "[D]":
-//            data[1]=tasks.get(i).getStatusIcon();
-//            i++;
-//            String[] deadlineInfo = data[2].trim().split("\\|", 2);
-//            description = deadlineInfo[0];
-//            String by = deadlineInfo[1];
-//            tasks.add(new Deadline(description, by));
-//            break;
-//        case "[E]":
-//            data[1]=tasks.get(i).getStatusIcon();
-//            i++;
-//            String[] eventInfo = data[2].trim().split("\\|", 2);
-//            description = eventInfo[0];
-//            String at = eventInfo[1];
-//            tasks.add(new Event(description, at));
-//            break;
-//        }
-//    }
 
     public void UpdateTextFile () {
         FileWriter fstream;
@@ -159,7 +153,8 @@ public class List {
             fstream = new FileWriter(filePath);
             String content="";
             for (int i=0;i<tasks.size();i++) {
-                content=content.concat(tasks.get(i)+"\n");
+                content+=tasks.get(i)+"\n";
+                System.out.println(tasks.get(i));
             }
             fstream.write(content);
             fstream.close();
@@ -168,7 +163,3 @@ public class List {
         }
     }
 }
-
-
-
-

@@ -6,6 +6,7 @@ public class Duke {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         List list = new List();
+        list.readOldTextFile();
 
 
         System.out.println("Hello! I'm Duke");
@@ -24,8 +25,6 @@ public class Duke {
             }
 
 
-
-
             else if (userInput.startsWith("deadline")) {
                 list.addDeadline(getDeadlineDescription(userInput),getStringAfterByAt(userInput));
             }
@@ -39,14 +38,17 @@ public class Duke {
                 list.addTodo(userInput.substring(5));
             }
 
+            else if (userInput.startsWith("delete")) {
+                list.toRemove(userInput.substring(7));
+            }
+
             else {
-//                list.addTask(userInput);
                 System.out.println("added: " + userInput + "\n");
             }
 
             userInput = in.nextLine(); //read next user input
         }
-
+        list.UpdateTextFile();
         System.out.println("Bye. Hope to see you again soon!");
 
     }
@@ -61,7 +63,7 @@ public class Duke {
     }
 
     public static String getStringAfterByAt (String input) {
-        String by = input.substring(input.indexOf('/') + 4);
+        String by = input.substring(input.indexOf('/')+4); //keep those after '/'
         return by;
     }
 
