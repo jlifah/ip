@@ -55,8 +55,8 @@ public class List {
             System.out.println("Now you have " + this.size + " tasks in the list.\n");
     }
 
-    public void addOldTodo (String description) {
-        tasks.add(new Todo(description));
+    public void addOldTodo (String description, boolean isDone) {
+        tasks.add(new Todo(description,isDone));
         this.size++;
     }
 
@@ -97,22 +97,29 @@ public class List {
 
                 if (line.startsWith("[T]")) {
                     String description = line.substring(7);
-                    addOldTodo(description);
+                    String outcome = line.substring(4,5);
+                    Boolean isDone;
+
+                    if (outcome.equals("\u2713")) {
+                        isDone=true;
+                    } else {
+                        isDone=false;
+                    }
+
+                    addOldTodo(description,isDone);
                 }
 
                 else if (line.startsWith("[D]")) {
                     String description = line.substring(7,line.indexOf("by")-2);
                     String by = line.substring(line.indexOf("by")+4,line.length()-1);
                     String status = line.substring(4,5);
-
                     Boolean isDone;
+
                     if (status.equals("\u2718")) {
                         isDone=false;
-                    }
-                    else {
+                    } else {
                         isDone=true;
                     }
-
 
                     addOldDeadline(description,by,isDone);
                 }

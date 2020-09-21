@@ -16,26 +16,16 @@ public class Duke {
         String userInput = in.nextLine();
 
         while (!userInput.equals("bye")) {
+
             if (userInput.equals("list")) {
                 list.printList();
-            }
-
-            else if(userInput.startsWith("done")){   //cannot use command.equals since user is entering more than just "done"
+            } else if(userInput.startsWith("done")){
                 list.isComplete(userInput);
-            }
-
-
-            else if (userInput.startsWith("deadline")) {
+            } else if (userInput.startsWith("deadline")) {
                 list.addDeadline(getDeadlineDescription(userInput),getStringAfterByAt(userInput));
-            }
-
-
-            else if (userInput.startsWith("event")) {
+            } else if (userInput.startsWith("event")) {
                 list.addEvent(getEventDescription(userInput),getStringAfterByAt(userInput));
-            }
-
-            else if (userInput.startsWith("todo")) {
-
+            } else if (userInput.startsWith("todo")) {
                 try {
                     if (userInput.length()==4) {
                         throw new Exception();
@@ -44,13 +34,9 @@ public class Duke {
                 } catch (Exception e) {
                     System.out.println("☹ OOPS!!! The description of a todo cannot be empty.\n");
                 }
-            }
-
-            else if (userInput.startsWith("delete")) {
+            } else if (userInput.startsWith("delete")) {
                 list.toRemove(userInput.substring(7));
-            }
-
-            else {
+            } else {
                 System.out.println("☹ OOPS!!! I'm sorry, but I don't know what that means :-(\n");
             }
 
@@ -58,10 +44,7 @@ public class Duke {
         }
         list.UpdateTextFile();
         System.out.println("Bye. Hope to see you again soon!");
-
     }
-
-
 
     public static String getDeadlineDescription (String input) {
         String description = input.substring(9);
@@ -81,7 +64,5 @@ public class Duke {
         description=description.substring(0, index-1);
         return description;
     }
-
-
 }
 
