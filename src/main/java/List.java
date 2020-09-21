@@ -20,7 +20,6 @@ public class List {
         System.out.println("");
     }
 
-
     public void addDeadline (String description, String by) {
         tasks.add(new Deadline(description,by));
         System.out.println("Got it. I've added this task:");
@@ -33,7 +32,6 @@ public class List {
         tasks.add(new Deadline(description,by,isDone));
         this.size++;
     }
-
 
     public void addEvent(String description, String at) {
         tasks.add(new Event(description, at));
@@ -55,7 +53,6 @@ public class List {
             System.out.println(tasks.get(this.size).toString());
             this.size++;
             System.out.println("Now you have " + this.size + " tasks in the list.\n");
-
     }
 
     public void addOldTodo (String description) {
@@ -85,20 +82,15 @@ public class List {
         System.out.println("Now you have "+ this.size+ " tasks in the list.\n");
     }
 
-
-
-
     private static String PATH = new File("").getAbsolutePath();
     static File filePath = new File(PATH + "/duke.txt");
 
+    //1. read old task list
+    //2. split into T/E/D, done and description and at/by
+    //3. add as new task into tasks arraylist
     public void readOldTextFile () {
-        //1. read old task list
-        //2. split into T/E/D, done and description and at/by
-        //3. add as new task into tasks arraylist
-
         try {
             filePath.createNewFile();
-//            System.out.println(PATH);
             Scanner s = new Scanner(filePath);
             while (s.hasNext()) {
                 String line = s.nextLine();
@@ -137,7 +129,6 @@ public class List {
                     else {
                         isDone=true;
                     }
-
                     addOldEvent(description,at, isDone);
                 }
             }
@@ -148,7 +139,6 @@ public class List {
         }
     }
 
-
     public void UpdateTextFile () {
         FileWriter fstream;
         try {
@@ -156,7 +146,6 @@ public class List {
             String content="";
             for (int i=0;i<tasks.size();i++) {
                 content+=tasks.get(i)+"\n";
-//                System.out.println(tasks.get(i));
             }
             fstream.write(content);
             fstream.close();

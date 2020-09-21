@@ -28,8 +28,4 @@ public class Task {
     public String toString(){
         return  getTypeIcon() + getStatusIcon() + description;
     }
-
-
-
-
 }

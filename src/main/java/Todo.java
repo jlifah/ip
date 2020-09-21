@@ -2,9 +2,7 @@ public class Todo extends Task{
 
     public Todo (String description) {
         super(description);
-
     }
-
 
     @Override
     public String toString() {
@@ -15,6 +13,4 @@ public class Todo extends Task{
     public String getTypeIcon(){
         return "[T]";
     }
-
-
 }
