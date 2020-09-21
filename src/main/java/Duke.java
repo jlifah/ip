@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Duke {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         List list = new List();
         list.readOldTextFile();
@@ -35,7 +35,15 @@ public class Duke {
             }
 
             else if (userInput.startsWith("todo")) {
-                list.addTodo(userInput.substring(5));
+
+                try {
+                    if (userInput.length()==4) {
+                        throw new Exception();
+                    }
+                    list.addTodo(userInput.substring(5));
+                } catch (Exception e) {
+                    System.out.println("☹ OOPS!!! The description of a todo cannot be empty.\n");
+                }
             }
 
             else if (userInput.startsWith("delete")) {
@@ -43,7 +51,7 @@ public class Duke {
             }
 
             else {
-                System.out.println("added: " + userInput + "\n");
+                System.out.println("☹ OOPS!!! I'm sorry, but I don't know what that means :-(\n");
             }
 
             userInput = in.nextLine(); //read next user input

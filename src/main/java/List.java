@@ -49,11 +49,13 @@ public class List {
     }
 
     public void addTodo (String description) {
-        tasks.add(new Todo(description));
-        System.out.println("Got it. I've added this task:");
-        System.out.println(tasks.get(this.size).toString());
-        this.size++;
-        System.out.println("Now you have " + this.size + " tasks in the list.\n");
+
+            tasks.add(new Todo(description));
+            System.out.println("Got it. I've added this task:");
+            System.out.println(tasks.get(this.size).toString());
+            this.size++;
+            System.out.println("Now you have " + this.size + " tasks in the list.\n");
+
     }
 
     public void addOldTodo (String description) {
@@ -154,7 +156,7 @@ public class List {
             String content="";
             for (int i=0;i<tasks.size();i++) {
                 content+=tasks.get(i)+"\n";
-                System.out.println(tasks.get(i));
+//                System.out.println(tasks.get(i));
             }
             fstream.write(content);
             fstream.close();
