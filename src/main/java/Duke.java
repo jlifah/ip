@@ -1,68 +1,70 @@
-
+import Store.Storage;
+import tasks.TaskList;
 import java.util.Scanner;
 
 public class Duke {
+    private TaskList tasks;
+    private Ui ui;
+    private Parser parser;
+    private Storage storage;
 
-    public static void main(String[] args) throws Exception {
+    public Duke () {
+        ui = new Ui();
+        parser= new Parser();
+        tasks = new TaskList();
+        storage = new Storage();
+    }
+
+    public void run() {
+        ui.printGreetings();
+        storage.update();
         Scanner in = new Scanner(System.in);
-        List list = new List();
-        list.readOldTextFile();
-
-
-        System.out.println("Hello! I'm Duke");
-        System.out.println("What can I do for you?\n");
-
-
         String userInput = in.nextLine();
 
-        while (!userInput.equals("bye")) {
+        while (!parser.userInputBye(userInput)) {
 
-            if (userInput.equals("list")) {
-                list.printList();
-            } else if(userInput.startsWith("done")){
-                list.isComplete(userInput);
-            } else if (userInput.startsWith("deadline")) {
-                list.addDeadline(getDeadlineDescription(userInput),getStringAfterByAt(userInput));
-            } else if (userInput.startsWith("event")) {
-                list.addEvent(getEventDescription(userInput),getStringAfterByAt(userInput));
-            } else if (userInput.startsWith("todo")) {
+            if (parser.userInputTodo(userInput)) {
                 try {
                     if (userInput.length()==4) {
                         throw new Exception();
                     }
-                    list.addTodo(userInput.substring(5));
+                    tasks.addTodo(userInput);
                 } catch (Exception e) {
                     System.out.println("☹ OOPS!!! The description of a todo cannot be empty.\n");
                 }
-            } else if (userInput.startsWith("delete")) {
-                list.toRemove(userInput.substring(7));
-            } else {
+            }
+
+            else if (parser.userInputDeadline(userInput)) {
+                tasks.addDeadline(userInput);
+            }
+
+            else if (parser.userInputEvent(userInput)) {
+                tasks.addEvent(userInput);
+            }
+
+            else if (parser.userInputDone(userInput)) {
+                tasks.isComplete(parser.taskDone(userInput));
+            }
+
+            else if (parser.userInputDelete(userInput)) {
+                tasks.toDelete(parser.taskDelete(userInput));
+            }
+
+            else if (parser.userInputList(userInput)) {
+                tasks.printList();
+            }
+
+            else {
                 System.out.println("☹ OOPS!!! I'm sorry, but I don't know what that means :-(\n");
             }
 
-            userInput = in.nextLine(); //read next user input
+            userInput = in.nextLine();
         }
-        list.UpdateTextFile();
-        System.out.println("Bye. Hope to see you again soon!");
+
+        ui.printBye();
     }
 
-    public static String getDeadlineDescription (String input) {
-        String description = input.substring(9);
-        int index = description.indexOf('/');
-        description=description.substring(0, index-1);
-        return description;
-    }
-
-    public static String getStringAfterByAt (String input) {
-        String by = input.substring(input.indexOf('/')+4); //keep those after '/'
-        return by;
-    }
-
-    public static String getEventDescription (String input) {
-        String description = input.substring(6);
-        int index = description.indexOf('/');
-        description=description.substring(0, index-1);
-        return description;
+    public static void main(String[] args) {
+        new Duke().run();
     }
 }
-
