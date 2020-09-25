@@ -1,10 +1,10 @@
-Duke project template
+Duke ip project
 
-This is a project template for a greenfield Java project. It's named after the Java mascot Duke. Given below are instructions on how to use it.
-
-Setting up in Intellij
+1. Setting up in Intellij
 
 Prerequisites: JDK 11, update Intellij to the most recent version.
+
+URL to download: https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html
 
 Open Intellij (if you are not in the welcome screen, click File > Close Project to close the existing project dialog first)
 Set up the correct JDK version, as follows:
@@ -16,9 +16,3 @@ Click Open or Import.
 Select the project directory, and click OK
 If there are any further prompts, accept the defaults.
 After the importing is complete, locate the src/main/java/Duke.java file, right-click it, and choose Run Duke.main(). If the setup is correct, you should see something like the below:
-Hello from
- ____        _        
-|  _ \ _   _| | _____ 
-| | | | | | | |/ / _ \
-| |_| | |_| |   <  __/
-|____/ \__,_|_|\_\___|

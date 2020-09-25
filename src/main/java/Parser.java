@@ -14,9 +14,11 @@ public class Parser extends Ui {
 
     public boolean userInputList (String input) {return input.startsWith("list"); }
 
-    public boolean userInputDeadline (String input) { return input.startsWith("deadline"); }
+    public boolean userInputDeadline (String input) { return input.startsWith("deadline");}
 
-    public boolean userInputEvent (String input) { return input.startsWith("event"); }
+    public boolean userInputEvent (String input) { return input.startsWith("event");}
+
+//    public boolean userInputFind (String input) {return input.startsWith("find");}
 
     public int taskDone (String input) {
         return Integer.parseInt(input.substring(5));

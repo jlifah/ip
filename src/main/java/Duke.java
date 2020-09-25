@@ -42,6 +42,7 @@ public class Duke {
                 tasks.addEvent(userInput);
             }
 
+
             else if (parser.userInputDone(userInput)) {
                 tasks.isComplete(parser.taskDone(userInput));
             }
@@ -53,6 +54,10 @@ public class Duke {
             else if (parser.userInputList(userInput)) {
                 tasks.printList();
             }
+
+//            else if (parser.userInputFind(userInput)) {
+//                tasks.findCommon(userInput.substring(5));
+//            }
 
             else {
                 System.out.println("☹ OOPS!!! I'm sorry, but I don't know what that means :-(\n");
