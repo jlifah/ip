@@ -4,7 +4,7 @@
 
 * Quick Start
 * Features 
-   - [Adding deadline task](#adding-deadline-task)
+   - [Adding deadline task](#adding-deadline-task-deadline)
    - Adding event task
    - Adding todo task
    - Viewing all the task recorded
