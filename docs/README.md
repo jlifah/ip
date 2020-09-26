@@ -4,7 +4,7 @@
 
 * Quick Start
 * Features 
-   - Adding deadline task
+   - [Adding deadline task](#adding-deadline-task)
    - Adding event task
    - Adding todo task
    - Viewing all the task recorded
@@ -44,8 +44,15 @@ If the issue tracker is enabled, you should be able to visit the following URL `
    - Select the project directory, and click OK
    - If there are any further prompts, accept the defaults.
    - After the importing is complete, locate the src/main/java/Duke.java file, right-click it, and choose Run Duke.main(). If the setup is correct, you should see something like the below:
+   
    ```
-   Hello! I'm Duke
+   Hello! I'm Duke,
+    ____        _        
+   |  _ \ _   _| | _____ 
+   | | | | | | | |/ / _ \
+   | |_| | |_| |   <  __/
+   |____/ \__,_|_|\_\___|
+           
    What can I do for you? :)
    ```
 
@@ -216,12 +223,12 @@ Bye. Hope to see you again soon!
 
 ## Command summary
 
-|    Action    |      Format, Examples     |
+|    Action       |      Format, Examples     |
 |:---:|:---:|
-|       deadline   |    `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`    //e.g, `deadline finish ip /by Sunday`               |
-|       event        |         `event **TASK DESCRIPTION** /at **DATE OF EVENT**` //e.g, `event project meeting /at Monday`             |
-|todo|        `todo **TASK DESCRIPTION**`  //e.g, `todo prepare for meeting`        |
+|       deadline   |    `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`  <br /> e.g, `deadline finish ip /by Sunday`               |
+|       event        |         `event **TASK DESCRIPTION** /at **DATE OF EVENT**` <br /> e.g, `event project meeting /at Monday`             |
+|todo|        `todo **TASK DESCRIPTION**`  <br /> e.g, `todo prepare for meeting`        |
 |          list             |            `list`            |
-|           find         |  `find **KEYWORD**` // e.g, `find meeting`                   |
-|           done                |       `done **INDEX OF TASK ON LIST**` // e.g, `done 2`         |
+|           find         |  `find **KEYWORD**` <br /> e.g, `find meeting`                   |
+|           done                |       `done **INDEX OF TASK ON LIST**` <br /> e.g, `done 2`         |
 |             exit             |                 `bye`          |

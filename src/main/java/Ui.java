@@ -1,7 +1,12 @@
 public class Ui {
 
     public void printGreetings () {
-        System.out.println("Hello! I'm Duke");
+        System.out.println("\nHello! I'm Duke,\n" +
+                " ____        _        \n" +
+                "|  _ \\ _   _| | _____ \n" +
+                "| | | | | | | |/ / _ \\\n" +
+                "| |_| | |_| |   <  __/\n" +
+                "|____/ \\__,_|_|\\_\\___|\n" );
         System.out.println("What can I do for you? :)\n");
     }
 
