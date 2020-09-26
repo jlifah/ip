@@ -215,8 +215,9 @@ Bye. Hope to see you again soon!
 
 
 ## Command summary
+
 |    Action    |      Format, Examples     |
-|:——————:|:——————————-:|
+|:---:|:---:|
 |       deadline   |    `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`    //e.g, `deadline finish ip /by Sunday`               |
 |       event        |         `event **TASK DESCRIPTION** /at **DATE OF EVENT**` //e.g, `event project meeting /at Monday`             |
 |todo|        `todo **TASK DESCRIPTION**`  //e.g, `todo prepare for meeting`        |
