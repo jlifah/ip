@@ -1,6 +1,6 @@
 # Duke User Guide
 
-###Duke is a Personal Assistant Chatbot that helps a person to keep track of various things. This application is named after the Java mascot Duke.
+### Duke is a Personal Assistant Chatbot that helps a person to keep track of various things. This application is named after the Java mascot Duke.
 
 * Quick Start
 * Features 
@@ -18,8 +18,8 @@
 
 
 
-##Quick Start
-###Locating the project
+## Quick Start
+### Locating the project
 1) Fork [ip project](https://github.com/nus-cs2113-AY2021S1/ip).
 2) Enable the issue tracker of your fork (Go to Settings of your fork, scroll to the Features section, and tick the Issues checkbox). Reason: at times we post feedback on your issue tracker.
 If the issue tracker is enabled, you should be able to visit the following URL `https://github.com/{your_user_name}/ip/issues` e.g., https://github.com/johnDoe/ip/issues
@@ -28,13 +28,13 @@ If the issue tracker is enabled, you should be able to visit the following URL `
 
 
 
-###Downloading Java 11 (if Java is not the latest version)
+### Downloading Java 11 (if Java is not the latest version)
 1) Download Java 11 from [Amazon Corretto](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html) according to your OS
 2) Save the downloaded file in a convenient, easy to find location
 
 
 
-###Setting up project in Intellij
+### Setting up project in Intellij
 1) Open Intellij (if you are not in the welcome screen, click File > Close Project to close the existing project dialog first)
 2) Set up the correct JDK version, as follows: Click Configure > Structure for New Projects and then Project Settings > Project > Project SDK
    - If JDK 11 is listed in the drop down, select it. If it is not, click New... and select the directory where you installed JDK 11
@@ -52,7 +52,7 @@ If the issue tracker is enabled, you should be able to visit the following URL `
 
 
 
-##Features
+## Features
 > Take note: Inputs that look like \**THIS\** are parameters to be supplied by user.
 
 > Word of advice: try not to add tasks without specifying whether it is deaadline/event/todo, if not the following error message will be shown:
@@ -62,7 +62,7 @@ If the issue tracker is enabled, you should be able to visit the following URL `
 
 
 
-###Adding deadline task: deadline
+### Adding deadline task: deadline
 
 Adds a deadline task to overall list
 
@@ -81,7 +81,7 @@ Now you have 1 tasks in the list.
 
 
 
-###Adding event task: event 
+### Adding event task: event 
 
 Adds an event task to overall list
 
@@ -99,7 +99,7 @@ Now you have 2 tasks in the list.
 
 
 
-###Adding todo task: todo
+### Adding todo task: todo
 
 Adds a todo task to overall list
 
@@ -121,7 +121,7 @@ Now you have 3 tasks in the list.
 
 
 
-###Viewing all task: list
+### Viewing all task: list
 
 Shows a list of all deadlines/events/todo recorded
 
@@ -136,7 +136,7 @@ Output:
 
 
 
-###Locating a task using a keyword: find
+### Locating a task using a keyword: find
 
 Finds all deadlines/events/todo recorded with specified keyword 
 
@@ -153,7 +153,7 @@ Output:
 
 
 
-###Marking task as done: done
+### Marking task as done: done
 
 Following the order on the overall list, specified deadlines/events/todo will be marked as done
 
@@ -173,7 +173,7 @@ Nice! I've marked this task as done:
 
 
 
-###Deleting a task: delete
+### Deleting a task: delete
 
 Following the order on the overall list, specified deadlines/events/todo will be deleted
 
@@ -194,14 +194,14 @@ Now you have 2 tasks in the list.
 
 
 
-###Saving the data
+### Saving the data
 
 List data will be saved automatically in the hard disk whenever the task list changes, there is no need to input a command
 
 
 
 
-###Exiting the program: exit
+### Exiting the program: exit
 
 Saves the data into the hard disk duke.txt file and terminates the Duke program
 
@@ -214,7 +214,7 @@ Bye. Hope to see you again soon!
 
 
 
-##Command summary
+## Command summary
 |    Action    |      Format, Examples     |
 |:——————:|:——————————-:|
 |       deadline   |    `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`    //e.g, `deadline finish ip /by Sunday`               |
