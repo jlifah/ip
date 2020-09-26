@@ -2,7 +2,7 @@ public class Ui {
 
     public void printGreetings () {
         System.out.println("Hello! I'm Duke");
-        System.out.println("What can I do for you?\n");
+        System.out.println("What can I do for you? :)\n");
     }
 
     public void printBye () {
