@@ -5,14 +5,14 @@
 * Quick Start
 * Features 
    - [Adding deadline task](#adding-deadline-task-deadline)
-   - Adding event task
-   - Adding todo task
-   - Viewing all the task recorded
-   - Locating a task using a keyword
-   - Marking a task as done
-   - Deleting a task
-   - Saving the data
-   - Exiting the program
+   - [Adding event task](#adding-event-task-event)
+   - [Adding todo task](#adding-todo-task-todo)
+   - [Viewing all the task recorded](#)
+   - [Locating a task using a keyword](#locating-a-task-using-a-keyword-find)
+   - [Marking a task as done](#marking-task-as-done-done)
+   - [Deleting a task](#deleting-a-task-delete)
+   - [Saving the data](#saving-the-data)
+   - [Exiting the program](#exiting-the-program-exit)
 * Command summary
 
 
