@@ -1,18 +1,19 @@
 # Duke User Guide ٩(^ᴗ^)۶ 
 
-<br>
 
 ### Duke, named after the Java mascot, is a Personal Assistant Chatbot that helps a person to keep track of various things. 
 
 <br>
 
+
 * Quick Start
 * Features 
-  - Adding a new task: [deadline](#adding-a-new-task-deadline) [event](#adding-a-new-task-event) [todo](#adding-a-new-task-todo)
-  - Checking/updating of tasks in list: [find](#locating-a-task-using-a-keyword-find) [delete](#deleting-a-task-delete) [done](#marking-task-as-done-done) [list](#viewing-all-task-list) [save](#saving-the-data-save)
-  - Exiting the program: [bye](#exiting-the-program-exit)
+  - Adding a new task:&nbsp; [deadline](#adding-a-new-task-deadline)&nbsp; [event](#adding-a-new-task-event) &nbsp; [todo](#adding-a-new-task-todo)
+  - Checking/updating of tasks in list:&nbsp; [delete](#deleting-a-task-delete)&nbsp; [done](#marking-task-as-done-done)&nbsp; [find](#locating-a-task-using-a-keyword-find)&nbsp; [list](#viewing-all-task-list)&nbsp; [save](#saving-the-data-save)
+  - Exiting the program: &nbsp;[exit](#exiting-the-program-exit)
 
 * Command summary 
+
 
 <br>
 
@@ -135,35 +136,23 @@ Note:
 
 
 
-### Viewing all task: `list`
+### Deleting a task: `delete`
 
-Shows a list of all deadlines/events/todo recorded
+Following the order on the overall list, specified deadlines/events/todo will be deleted
 
-Format: `list`
+Format: `delete **INDEX OF TASK ON LIST**`
+* Index has to be an integer
+* Only one deadlines/events/todo can be deleted at one time
+[X] will be changed to [✔]
 
-Output:
-```
-1. [D][✘] finish ip (by: Sunday)
-2. [E][✘] project meeting (at: Monday)
-3. [T][✘] prepare for meeting
-```
-
-
-
-### Locating a task using a keyword: `find`
-
-Finds all deadlines/events/todo description recorded in list with specified keyword 
-
-Format: `find **KEYWORD**`
-
-Example: `find meeting`
+Example: `delete 2`
 
 Output:
 ```
-1. [E][✘] project meeting (at: Monday)
-2. [T][✘] prepare for meeting
+Noted. I've removed this task:
+[E][✓] project meeting (at: Monday)
+Now you have 2 tasks in the list.
 ```
-
 
 
 
@@ -187,24 +176,35 @@ Nice! I've marked this task as done:
 
 
 
-### Deleting a task: `delete`
+### Locating a task using a keyword: `find`
 
-Following the order on the overall list, specified deadlines/events/todo will be deleted
+Finds all deadlines/events/todo description recorded in list with specified keyword 
 
-Format: `delete **INDEX OF TASK ON LIST**`
-* Index has to be an integer
-* Only one deadlines/events/todo can be deleted at one time
-[X] will be changed to [✔]
+Format: `find **KEYWORD**`
 
-Example: `delete 2`
+Example: `find meeting`
 
 Output:
 ```
-Noted. I've removed this task:
-[E][✓] project meeting (at: Monday)
-Now you have 2 tasks in the list.
+1. [E][✘] project meeting (at: Monday)
+2. [T][✘] prepare for meeting
 ```
 
+
+
+
+### Viewing all task: `list`
+
+Shows a list of all deadlines/events/todo recorded
+
+Format: `list`
+
+Output:
+```
+1. [D][✘] finish ip (by: Sunday)
+2. [E][✘] project meeting (at: Monday)
+3. [T][✘] prepare for meeting
+```
 
 
 
