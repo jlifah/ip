@@ -1,21 +1,20 @@
-# Duke User Guide
+# Duke User Guide ٩(^ᴗ^)۶ 
 
-### Duke is a Personal Assistant Chatbot that helps a person to keep track of various things. This application is named after the Java mascot Duke.
+<br>
+
+### Duke, named after the Java mascot, is a Personal Assistant Chatbot that helps a person to keep track of various things. 
+
+<br>
 
 * Quick Start
 * Features 
-   - [Adding deadline task](#adding-deadline-task-deadline)
-   - [Adding event task](#adding-event-task-event)
-   - [Adding todo task](#adding-todo-task-todo)
-   - [Viewing all the task recorded](#)
-   - [Locating a task using a keyword](#locating-a-task-using-a-keyword-find)
-   - [Marking a task as done](#marking-task-as-done-done)
-   - [Deleting a task](#deleting-a-task-delete)
-   - [Saving the data](#saving-the-data)
-   - [Exiting the program](#exiting-the-program-exit)
-* Command summary
+  - Adding a new task: [deadline](#adding-a-new-task-deadline) [event](#adding-a-new-task-event) [todo](#adding-a-new-task-todo)
+  - Checking/updating of tasks in list: [find](#locating-a-task-using-a-keyword-find) [delete](#deleting-a-task-delete) [done](#marking-task-as-done-done) [list](#viewing-all-task-list) [save](#saving-the-data-save)
+  - Exiting the program: [bye](#exiting-the-program-exit)
 
+* Command summary 
 
+<br>
 
 
 ## Quick Start
@@ -56,7 +55,7 @@ If the issue tracker is enabled, you should be able to visit the following URL `
    What can I do for you? :)
    ```
 
-
+<br>
 
 
 ## Features
@@ -64,12 +63,11 @@ If the issue tracker is enabled, you should be able to visit the following URL `
 
 > Word of advice: try not to add tasks without specifying whether it is deaadline/event/todo, if not the following error message will be shown:
 ```
-☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+OOPS!!! I'm sorry, but I don't know what that means (/ﾟДﾟ)/
 ```
 
 
-
-### Adding deadline task: deadline
+### Adding a new task: `deadline`
 
 Adds a deadline task to overall list
 
@@ -85,10 +83,13 @@ Got it. I've added this task:
 Now you have 1 tasks in the list.
 ```
 
+Note:
+* `[D]` - Deadline Task 
+* `[X]` - Deadline is **not** done
 
 
 
-### Adding event task: event 
+### Adding a new task: `event`
 
 Adds an event task to overall list
 
@@ -104,16 +105,19 @@ Got it. I've added this task:
 Now you have 2 tasks in the list.
 ```
 
+Note:
+* `[E]` - Event task
+* `[X]` - Event is **not** done
 
 
-### Adding todo task: todo
+### Adding a new task: `todo`
 
 Adds a todo task to overall list
 
 Format: `todo **TASK DESCRIPTION**`
 * All fields should be filled. If not, the following error message will be shown:
    ```
-   ☹ OOPS!!! The description of a todo cannot be empty.
+   OOPS!!! The description of a todo cannot be empty ☹
    ```
 
 Example: `todo prepare for meeting` (Where prepare for meeting is the task)
@@ -125,10 +129,13 @@ Got it. I've added this task:
 Now you have 3 tasks in the list.
 ```
 
+Note:
+* `[T]` - Todo task
+* `[X]` - Todo is **not** done
 
 
 
-### Viewing all task: list
+### Viewing all task: `list`
 
 Shows a list of all deadlines/events/todo recorded
 
@@ -143,9 +150,9 @@ Output:
 
 
 
-### Locating a task using a keyword: find
+### Locating a task using a keyword: `find`
 
-Finds all deadlines/events/todo recorded with specified keyword 
+Finds all deadlines/events/todo description recorded in list with specified keyword 
 
 Format: `find **KEYWORD**`
 
@@ -160,7 +167,7 @@ Output:
 
 
 
-### Marking task as done: done
+### Marking task as done: `done`
 
 Following the order on the overall list, specified deadlines/events/todo will be marked as done
 
@@ -180,7 +187,7 @@ Nice! I've marked this task as done:
 
 
 
-### Deleting a task: delete
+### Deleting a task: `delete`
 
 Following the order on the overall list, specified deadlines/events/todo will be deleted
 
@@ -201,16 +208,16 @@ Now you have 2 tasks in the list.
 
 
 
-### Saving the data
+### Saving the data: `save`
 
 List data will be saved automatically in the hard disk whenever the task list changes, there is no need to input a command
 
 
 
 
-### Exiting the program: exit
+### Exiting the program: `exit`
 
-Saves the data into the hard disk duke.txt file and terminates the Duke program
+Terminates the Duke program
 
 Format: `bye`
 
@@ -219,16 +226,16 @@ Output:
 Bye. Hope to see you again soon!
 ```
 
-
+<br>
 
 ## Command summary
 
-|    Action       |      Format, Examples     |
-|:---:|:---:|
-|       deadline   |    `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`  <br /> e.g, `deadline finish ip /by Sunday`               |
-|       event        |         `event **TASK DESCRIPTION** /at **DATE OF EVENT**` <br /> e.g, `event project meeting /at Monday`             |
-|todo|        `todo **TASK DESCRIPTION**`  <br /> e.g, `todo prepare for meeting`        |
-|          list             |            `list`            |
-|           find         |  `find **KEYWORD**` <br /> e.g, `find meeting`                   |
-|           done                |       `done **INDEX OF TASK ON LIST**` <br /> e.g, `done 2`         |
-|             exit             |                 `bye`          |
+|    Action       |      Format     |   Examples | 
+|:---:|:---:|:---:|
+|       deadline   |    `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`                 |   `deadline finish ip /by Sunday` |
+|       event        |         `event **TASK DESCRIPTION** /at **DATE OF EVENT**`          |  `event project meeting /at Monday` |
+|todo|        `todo **TASK DESCRIPTION**`       |   `todo prepare for meeting` | 
+|          list             |            `list`            |    | 
+|           find         |  `find **KEYWORD**`                    |    `find meeting`  |
+|           done                |       `done **INDEX OF TASK ON LIST**`          |   `done 2`  |
+|             exit             |                 `bye`          |    | 
