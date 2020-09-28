@@ -5,6 +5,7 @@ import parser.Parser2;
 import java.util.ArrayList;
 
 public class converter  {
+    //convert Tasks from ArrayList<String> to ArrayList<Task>
     public static ArrayList<Task> convert (ArrayList<String> previousList) {
         final ArrayList<Task> updateWithPreviousList = new ArrayList<>();
 
