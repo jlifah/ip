@@ -8,6 +8,8 @@ public class Duke {
     private Parser parser;
     private Storage storage;
 
+
+    //creates new set up UI,Parser, Storage and TaskList when duke first runs
     public Duke () {
         ui = new Ui();
         parser= new Parser();
@@ -15,6 +17,7 @@ public class Duke {
         storage = new Storage();
     }
 
+    //reads the different user input and identifies them accordingly
     public void run() {
         ui.printGreetings();
         storage.update();
@@ -69,6 +72,7 @@ public class Duke {
         ui.printBye();
     }
 
+    //first method Duke goes to when it runs
     public static void main(String[] args) {
         new Duke().run();
     }

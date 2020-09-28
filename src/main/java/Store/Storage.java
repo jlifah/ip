@@ -14,6 +14,7 @@ public class Storage {
     private static final String PATH = new File("").getAbsolutePath();
     private static final String FILE_PATH = PATH + "/duke.txt";
 
+    //reads the duke.txt file and add it to the new ArrayList
     public static ArrayList<Task> update() {
         if(Files.exists(Path.of(PATH))){
             File file = new File(FILE_PATH);
@@ -44,6 +45,7 @@ public class Storage {
         }
     }
 
+    //create a new duke.txt file if it is not already created
     private static void createDataFile() throws IOException {
         File file = new File(Storage.PATH);
         boolean isDirCreated = file.mkdir();
@@ -53,6 +55,7 @@ public class Storage {
             file.createNewFile();
         }
     }
+
 
     public void save(ArrayList<Task> taskList) throws IOException {
         List<String> taskToString_TaskList = Decipher.eTaskList(taskList);

@@ -4,6 +4,7 @@ import tasks.*;
 import java.util.ArrayList;
 
 public class Decipher {
+    //convert Tasks from ArrayList<Task> to ArrayList<String>
     public static ArrayList<String> eTaskList(ArrayList<Task> taskList) {
         final ArrayList<String> encodedTasks = new ArrayList<>();
 
