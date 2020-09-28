@@ -1,6 +1,5 @@
 # Duke User Guide ٩(^ᴗ^)۶ 
 
-
 ### Duke, named after the Java mascot, is a Personal Assistant Chatbot that helps a person to keep track of various things. 
 
 <br>
@@ -22,14 +21,9 @@
 If the issue tracker is enabled, you should be able to visit the following URL `https://github.com/{your_user_name}/ip/issues` e.g., https://github.com/johnDoe/ip/issues
 3) Clone the fork onto your computer.
 
-
-
-
 ### Downloading Java 11 (if Java is not the latest version)
 1) Download Java 11 from [Amazon Corretto](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html) according to your OS
 2) Save the downloaded file in a convenient, easy to find location
-
-
 
 ### Setting up project in Intellij
 1) Open Intellij (if you are not in the welcome screen, click File > Close Project to close the existing project dialog first)
@@ -52,9 +46,8 @@ If the issue tracker is enabled, you should be able to visit the following URL `
            
    What can I do for you? :)
    ```
-
+   
 <br>
-
 
 ## Features
 > Take note: Inputs that look like \**THIS\** are parameters to be supplied by user.
@@ -63,11 +56,6 @@ If the issue tracker is enabled, you should be able to visit the following URL `
 ```
 OOPS!!! I'm sorry, but I don't know what that means (/ﾟДﾟ)/
 ```
-
-
-
-
-
 
 ### Adding a new task: `deadline`
 
@@ -89,8 +77,6 @@ Note:
 * `[D]` - Deadline Task 
 * `[X]` - Deadline is **not** done
 
-
-
 ### Adding a new task: `event`
 
 Adds an event task to overall list
@@ -110,7 +96,6 @@ Now you have 2 tasks in the list.
 Note:
 * `[E]` - Event task
 * `[X]` - Event is **not** done
-
 
 ### Adding a new task: `todo`
 
@@ -135,8 +120,6 @@ Note:
 * `[T]` - Todo task
 * `[X]` - Todo is **not** done
 
-
-
 ### Deleting a task: `delete`
 
 Following the order on the overall list, specified deadlines/events/todo will be deleted
@@ -155,8 +138,6 @@ Noted. I've removed this task:
 Now you have 2 tasks in the list.
 ```
 
-
-
 ### Marking task as done: `done`
 
 Following the order on the overall list, specified deadlines/events/todo will be marked as done
@@ -174,9 +155,6 @@ Nice! I've marked this task as done:
 [E][✓] project meeting (at: Monday)
 ```
 
-
-
-
 ### Locating a task using a keyword: `find`
 
 Finds all deadlines/events/todo description recorded in list with specified keyword 
@@ -191,9 +169,6 @@ Output:
 2. [T][✘] prepare for meeting
 ```
 
-
-
-
 ### Viewing all task: `list`
 
 Shows a list of all deadlines/events/todo recorded
@@ -207,14 +182,9 @@ Output:
 3. [T][✘] prepare for meeting
 ```
 
-
-
 ### Saving the data: `save`
 
 List data will be saved automatically in the hard disk whenever the task list changes, there is no need to input a command
-
-
-
 
 ### Exiting the program: `exit`
 
