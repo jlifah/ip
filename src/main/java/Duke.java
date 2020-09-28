@@ -55,9 +55,9 @@ public class Duke {
                 tasks.printList();
             }
 
-//            else if (parser.userInputFind(userInput)) {
-//                tasks.findCommon(userInput.substring(5));
-//            }
+            else if (parser.userInputFind(userInput)) {
+                tasks.findCommon(userInput.substring(5));
+            }
 
             else {
                 System.out.println("OOPS!!! I'm sorry, but I don't know what that means (/ﾟДﾟ)/\n");
