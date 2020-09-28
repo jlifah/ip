@@ -1,5 +1,4 @@
 package tasks;
-
 import Store.Storage;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -96,7 +95,7 @@ public class TaskList extends Storage {
         try {
             storage.save(taskList);
         } catch (IOException e) {
-            System.out.println("error");
+            System.out.println("error saving");
         }
     }
 
