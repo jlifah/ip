@@ -5,7 +5,6 @@
 
 <br>
 
-
 * Quick Start
 * Features 
   - Adding a new task:&nbsp; [deadline](#adding-a-new-task-deadline)&nbsp; [event](#adding-a-new-task-event) &nbsp; [todo](#adding-a-new-task-todo)
@@ -14,9 +13,7 @@
 
 * Command summary 
 
-
 <br>
-
 
 ## Quick Start
 ### Locating the project
