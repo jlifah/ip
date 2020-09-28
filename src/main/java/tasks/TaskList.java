@@ -72,16 +72,16 @@ public class TaskList extends Storage {
         TaskList.save();
     }
 
-//    public void findCommon (String keyword) {
-//        int index=1;
-//        for (Task task : taskList) {
-//            if (task.toString().contains(keyword)) {
-//                System.out.println(index + ". " + task.toString());
-//                index++;
-//            }
-//        }
-//        System.out.println();
-//    }
+    public void findCommon (String keyword) {
+        int index=1;
+        for (Task task : taskList) {
+            if (task.toString().contains(keyword)) {
+                System.out.println(index + ". " + task.toString());
+                index++;
+            }
+        }
+        System.out.println();
+    }
 
     public void printList() {
         for (int i=0;i<taskList.size();i++) {
