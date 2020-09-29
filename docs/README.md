@@ -15,7 +15,7 @@
 <br>
 
 ## Quick Start
-1) [If needed] Download Java 11 from [Amazon Corretto](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
+1) Ensure that Java 11 is available on your computer. If not, Java 11 can be found [here](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
 
 2) Download the [ip.jar](https://github.com/jlifah/ip/releases/download/ip.jar-v0.2/ip.jar) file 
 
@@ -40,7 +40,7 @@
 <br>
 
 ## Features
-> Take note 1: Inputs that look like \**THIS\** are parameters to be supplied by user.
+> Take note 1: Inputs that look like \**THIS\** are parameters to be supplied by user
 
 > Take note 2: Do not to add tasks without specifying whether it is deadline/event/todo, if not the following error message will be shown:
 ```
