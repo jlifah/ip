@@ -36,7 +36,7 @@
 <br>
 
 ## Features
-> Take note: Inputs that look like \***THIS\*** are parameters to be supplied by user.
+> Take note: Inputs that look like \**THIS\** are parameters to be supplied by user.
 
 > Word of advice: do not to add tasks without specifying whether it is deadline/event/todo, if not the following error message will be shown:
 ```
@@ -47,7 +47,7 @@ OOPS!!! I'm sorry, but I don't know what that means (/ﾟДﾟ)/
 
 Adds a deadline task to overall list
 
-Format: `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`
+Format: `deadline *TASK DESCRIPTION* /by *DEADLINE DUE DATE*`
 * All fields must be filled
 
 Example: `deadline finish ip /by Sunday` (Where finish ip is the task and Sunday is the deadline due date)
@@ -67,7 +67,7 @@ Note:
 
 Adds an event task to overall list
 
-Format: `event **TASK DESCRIPTION** /at **DATE OF EVENT**`
+Format: `event *TASK DESCRIPTION* /at *DATE OF EVENT*`
 * All fields must be filled
 
 Example: `event project meeting /at Monday` (Where project meeting is the task and Monday is the event day)
@@ -87,7 +87,7 @@ Note:
 
 Adds a todo task to overall list
 
-Format: `todo **TASK DESCRIPTION**`
+Format: `todo *TASK DESCRIPTION*`
 * All fields should be filled. If not, the following error message will be shown:
    ```
    OOPS!!! The description of a todo cannot be empty ☹
@@ -110,7 +110,7 @@ Note:
 
 Following the order on the overall list, specified deadlines/events/todo will be deleted
 
-Format: `delete **INDEX OF TASK ON LIST**`
+Format: `delete *INDEX OF TASK ON LIST*`
 * Index has to be an integer
 * Only one deadlines/events/todo can be deleted at one time
 [X] will be changed to [✔]
@@ -128,8 +128,8 @@ Now you have 2 tasks in the list.
 
 Following the order on the overall list, specified deadlines/events/todo will be marked as done
 
-Format: `done **INDEX OF TASK ON LIST**`
-* Index has to be a integer
+Format: `done *INDEX OF TASK ON LIST*`
+* Index has to be an integer
 * Only one deadlines/events/todo can be marked as done at one time
 [✘] will be changed to [✔]
 
@@ -145,7 +145,7 @@ Nice! I've marked this task as done:
 
 Finds all deadlines/events/todo description recorded in list with specified keyword 
 
-Format: `find **KEYWORD**`
+Format: `find *KEYWORD*`
 
 Example: `find meeting`
 
@@ -188,10 +188,10 @@ Bye. Hope to see you again soon!
 
 |    Action       |      Format     |   Examples | 
 |:---:|:---:|:---:|
-|       deadline   |    `deadline **TASK DESCRIPTION** /by **DEADLINE DUE DATE**`                 |   `deadline finish ip /by Sunday` |
-|       event        |         `event **TASK DESCRIPTION** /at **DATE OF EVENT**`          |  `event project meeting /at Monday` |
-|todo|        `todo **TASK DESCRIPTION**`       |   `todo prepare for meeting` | 
+|       deadline   |    `deadline *TASK DESCRIPTION* /by *DEADLINE DUE DATE*`                 |   `deadline finish ip /by Sunday` |
+|       event        |         `event *TASK DESCRIPTION* /at *DATE OF EVENT*`          |  `event project meeting /at Monday` |
+|todo|        `todo *TASK DESCRIPTION*`       |   `todo prepare for meeting` | 
 |          list             |            `list`            |    | 
-|           find         |  `find **KEYWORD**`                    |    `find meeting`  |
-|           done                |       `done **INDEX OF TASK ON LIST**`          |   `done 2`  |
+|           find         |  `find *KEYWORD*`                    |    `find meeting`  |
+|           done                |       `done *INDEX OF TASK ON LIST*`          |   `done 2`  |
 |             exit             |                 `bye`          |    | 
