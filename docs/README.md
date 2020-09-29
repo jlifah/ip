@@ -16,8 +16,11 @@
 
 ## Quick Start
 1) [If needed] Download Java 11 from [Amazon Corretto](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
+
 2) Download the [ip.jar](https://github.com/jlifah/ip/releases/download/ip.jar-v0.2/ip.jar) file 
+
 3) Create an empty folder in a convenient location eg. Desktop and copy jar file there
+
 4) Open command window/terminal in that window and run the command java `java -jar {filename}.jar` e.g., `java -jar ip.jar`
    - Upon successful run, the following opening message will be shown,
       ```
@@ -30,18 +33,20 @@
               
       What can I do for you? :)
       ```
+     
 5) Available commands for ip.jar will be available in the Features section below
 
 
 <br>
 
 ## Features
-> Take note: Inputs that look like \**THIS\** are parameters to be supplied by user.
+> Take note 1: Inputs that look like \**THIS\** are parameters to be supplied by user.
 
-> Word of advice: do not to add tasks without specifying whether it is deadline/event/todo, if not the following error message will be shown:
+> Take note 2: Do not to add tasks without specifying whether it is deadline/event/todo, if not the following error message will be shown:
 ```
 OOPS!!! I'm sorry, but I don't know what that means (/ﾟДﾟ)/
 ```
+
 
 ### Adding a new task: `deadline`
 
@@ -63,6 +68,7 @@ Note:
 * `[D]` - Deadline Task 
 * `[X]` - Deadline is **not** done
 
+
 ### Adding a new task: `event`
 
 Adds an event task to overall list
@@ -82,6 +88,7 @@ Now you have 2 tasks in the list.
 Note:
 * `[E]` - Event task
 * `[X]` - Event is **not** done
+
 
 ### Adding a new task: `todo`
 
@@ -140,6 +147,7 @@ Output:
 Nice! I've marked this task as done:
 [T][✓] prepare for meeting
 ```
+
 
 ### Locating a task using a keyword: `find`
 
