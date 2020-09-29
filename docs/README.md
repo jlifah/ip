@@ -18,7 +18,7 @@
 1) [If needed] Download Java 11 from [Amazon Corretto](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
 2) Download the [ip.jar](https://github.com/jlifah/ip/releases/download/ip.jar-v0.2/ip.jar) file 
 3) Create an empty folder in a convenient location eg. Desktop and copy jar file there
-4) Open command window/terminal in that window and run the command java `java -jar {filename}.jar` e.g., `java -jar ip.jar` for Windows OS and `java --jar {filename}.jar` e.g., `java --jar duke.jar` for Mac OS
+4) Open command window/terminal in that window and run the command java `java -jar {filename}.jar` e.g., `java -jar ip.jar`
    - Upon successful run, the following opening message will be shown,
       ```
       Hello! I'm Duke,
@@ -36,7 +36,7 @@
 <br>
 
 ## Features
-> Take note: Inputs that look like **THIS** are parameters to be supplied by user.
+> Take note: Inputs that look like \**THIS\** are parameters to be supplied by user.
 
 > Word of advice: do not to add tasks without specifying whether it is deadline/event/todo, if not the following error message will be shown:
 ```
