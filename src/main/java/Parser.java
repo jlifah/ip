@@ -1,3 +1,4 @@
+//interprets the user commands
 public class Parser extends Ui {
 
     public boolean userInputBye (String input) {
