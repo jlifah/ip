@@ -36,7 +36,7 @@
 <br>
 
 ## Features
-> Take note: Inputs that look like \**THIS\** are parameters to be supplied by user.
+> Take note: Inputs that look like \***THIS\*** are parameters to be supplied by user.
 
 > Word of advice: do not to add tasks without specifying whether it is deadline/event/todo, if not the following error message will be shown:
 ```
