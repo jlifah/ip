@@ -17,7 +17,7 @@ public class Ui {
     }
 
     public void printHelp () {
-        System.out.println("\nHere are all the available commands and their respective formats:");
+        System.out.println("Here are all the available commands and their respective formats:");
         System.out.println("Adding a deadline: deadline **DESCRIPTION** /by **TASK_DEADLINE**");
         System.out.println("Adding an event: event **DESCRIPTION** /at **TASK_START_DATE**");
         System.out.println("Adding an item in todo: todo **DESCRIPTION**");
@@ -25,6 +25,6 @@ public class Ui {
         System.out.println("Marking task as done: done **INDEX_OF_TASK**");
         System.out.println("Deleting a task: delete **INDEX_OF_TASK**");
         System.out.println("Using keyword to find recorded tasks: find **KEYWORD**");
-        System.out.println("Terminating Duke.ip: bye\n");
+        System.out.println("Terminating Duke: bye\n");
     }
 }

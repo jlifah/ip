@@ -17,7 +17,7 @@
 ## Quick Start
 1) Ensure that Java 11 is available on your computer. If not, Java 11 can be found [here](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
 
-2) Download the [ip.jar](https://github.com/jlifah/ip/releases/download/ip.jar-v0.2/ip.jar) file 
+2) Download the [ip.jar](https://github.com/jlifah/ip/releases/download/v0.2/ip.jar) file 
 
 3) Create an empty folder in a convenient location eg. Desktop and copy jar file there
 
