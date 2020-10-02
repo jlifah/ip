@@ -22,19 +22,6 @@
 3) Create an empty folder in a convenient location eg. Desktop and copy jar file there
 
 4) Open command window/terminal in that window and run the command java `java -jar {filename}.jar` e.g., `java -jar ip.jar`
-   - Upon successful run, the following opening message will be shown,
-      ```
-      Hello! I'm Duke,
-       ____        _        
-      |  _ \ _   _| | _____ 
-      | | | | | | | |/ / _ \
-      | |_| | |_| |   <  __/
-      |____/ \__,_|_|\_\___|
-              
-      What can I do for you? :)
-      ```
-     
-5) Available commands for ip.jar will be available in the Features section below
 
 
 <br>

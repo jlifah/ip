@@ -21,6 +21,8 @@ public class Parser extends Ui {
 
     public boolean userInputFind (String input) {return input.startsWith("find");}
 
+    public boolean userInputHelp (String input) {return input.startsWith("help");}
+
     public int taskDone (String input) {
         return Integer.parseInt(input.substring(5));
     }

@@ -19,6 +19,7 @@ public class Duke {
 
     //reads the different user input and identifies them accordingly
     public void run() {
+        ui.printHelp();
         ui.printGreetings();
         storage.update();
         Scanner in = new Scanner(System.in);
@@ -35,34 +36,21 @@ public class Duke {
                 } catch (Exception e) {
                     System.out.println("☹ OOPS!!! The description of a todo cannot be empty.\n");
                 }
-            }
-
-            else if (parser.userInputDeadline(userInput)) {
+            } else if (parser.userInputDeadline(userInput)) {
                 tasks.addDeadline(userInput);
-            }
-
-            else if (parser.userInputEvent(userInput)) {
+            } else if (parser.userInputEvent(userInput)) {
                 tasks.addEvent(userInput);
-            }
-
-
-            else if (parser.userInputDone(userInput)) {
+            } else if (parser.userInputDone(userInput)) {
                 tasks.isComplete(parser.taskDone(userInput));
-            }
-
-            else if (parser.userInputDelete(userInput)) {
+            } else if (parser.userInputDelete(userInput)) {
                 tasks.toDelete(parser.taskDelete(userInput));
-            }
-
-            else if (parser.userInputList(userInput)) {
+            } else if (parser.userInputList(userInput)) {
                 tasks.printList();
-            }
-
-            else if (parser.userInputFind(userInput)) {
+            } else if (parser.userInputFind(userInput)) {
                 tasks.findCommon(userInput.substring(5));
-            }
-
-            else {
+            } else if (parser.userInputHelp(userInput)) {
+                ui.printHelp();
+            } else {
                 System.out.println("OOPS!!! I'm sorry, but I don't know what that means (/ﾟДﾟ)/\n");
             }
 
